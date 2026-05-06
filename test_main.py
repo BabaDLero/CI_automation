@@ -6,7 +6,15 @@ from app import app
 class FlaskTestCase(unittest.TestCase):
 
     def setUp(self):
+        # Create a Flask test client for the app
         self.app = app.test_client()
+
+    def test_placeholder_should_pass(self):
+        # This test is intentionally simple and should pass.
+        self.assertEqual(1, 1)
+
+
+
 
     def test_home(self):
         response = self.app.get('/')
