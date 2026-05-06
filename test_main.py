@@ -9,9 +9,10 @@ class FlaskTestCase(unittest.TestCase):
         # Create a Flask test client for the app
         self.app = app.test_client()
 
-    def test_placeholder_should_pass(self):
-        # This test is intentionally simple and should pass.
-        self.assertEqual(1, 1)
+    def test_placeholder_should_fail(self):
+        # This test is intentionally wrong to verify CI catches failures.
+        self.assertEqual(1, 2)
+
 
 
 
